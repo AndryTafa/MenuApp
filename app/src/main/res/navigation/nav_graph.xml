@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/orderHereFragment">
+
+    <fragment
+        android:id="@+id/firstFragmentNew"
+        android:name="com.andry.presentation.ui.fragments.HomeFragment"
+        android:label="FirstFragmentNew"
+        tools:layout="@layout/fragment_first_new">
+        <action
+            android:id="@+id/action_firstFragmentNew_to_finalFragment"
+            app:destination="@id/finalFragment"
+            app:popUpTo="@id/firstFragmentNew"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalFragment"
+        android:name="com.andry.presentation.ui.fragments.FinalFragment"
+        android:label="FinalFragment"
+        tools:layout="@layout/fragment_final">
+        <action
+            android:id="@+id/action_finalFragment_to_firstFragmentNew"
+            app:destination="@id/firstFragmentNew"
+            app:popUpTo="@id/finalFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderHereFragment"
+        android:name="com.andry.presentation.ui.fragments.OrderHereFragment"
+        android:label="OrderHereFragment"
+        tools:layout="@layout/fragment_order_here">
+        <action
+            android:id="@+id/action_orderHereFragment_to_serveTypeFragment"
+            app:destination="@id/serveTypeFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_serve_type"
+        android:id="@+id/serveTypeFragment"
+        android:name="com.andry.presentation.ui.fragments.ServeTypeFragment"
+        android:label="ServeTypeFragment" >
+        <action
+            android:id="@+id/action_serveTypeFragment_to_firstFragmentNew"
+            app:destination="@id/firstFragmentNew" />
+    </fragment>
+</navigation>

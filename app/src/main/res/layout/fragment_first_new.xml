@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="com.andry.presentation.ui.fragments.FirstFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_guideline_0.2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_guideline_0.87"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_guideline_0.15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/_16sdp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@id/h_guideline_0.2"
+        app:layout_constraintEnd_toEndOf="@id/v_guideline_0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/v_guideline_0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/h_guideline_0.2" />
+
+    <LinearLayout
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/h_guideline_0.87"
+        app:layout_constraintEnd_toEndOf="@id/v_guideline_0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/h_guideline_0.2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_0.87"
+            app:layout_constraintEnd_toEndOf="@id/v_guideline_0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/h_guideline_0.2"
+            tools:listitem="@layout/item_category" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_guideline_0.4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Burgers"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/v_guideline_0.4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSettingsButton"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvCategoryName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCategoryName"
+        app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/ivShoppingCartButton"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/shopping_cart"
+        app:layout_constraintBottom_toBottomOf="@id/tvCategoryName"
+        app:layout_constraintEnd_toStartOf="@id/ivSettingsButton"
+        app:layout_constraintTop_toTopOf="@id/tvCategoryName"
+        app:tint="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:text="Exclusive Offers"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintStart_toStartOf="@id/v_guideline_0.4"
+        app:layout_constraintTop_toBottomOf="@id/tvCategoryName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFoods"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/h_guideline_0.87"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/v_guideline_0.4"
+        app:layout_constraintTop_toTopOf="@id/h_guideline_0.15"
+        app:spanCount="2"
+        tools:listitem="@layout/item_food" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/primary_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/h_guideline_0.87" />
+
+    <TextView
+        android:id="@+id/tvTotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:text="Total"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvTotalPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/h_guideline_0.87"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:text="$0.00"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalText" />
+
+    <TextView
+        android:textSize="@dimen/_12ssp"
+        android:id="@+id/tvPayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:background="@drawable/bg_rounded"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:text="Pay"
+        android:textColor="@color/primary_colour"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/h_guideline_0.87" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

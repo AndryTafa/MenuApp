@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_category_rounded_no_color"
+    android:backgroundTint="@color/white">
+
+    <ImageView
+        android:id="@+id/ivWarning"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:src="@drawable/warning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginHorizontal="@dimen/_24sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:text="Add to the basket first"
+        android:textColor="@color/grey_price"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/btnOkay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivWarning" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOkay"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:textSize="@dimen/_12ssp"
+        android:background="@drawable/bg_category_rounded_no_color"
+        android:backgroundTint="@color/primary_colour"
+        android:text="Okay"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

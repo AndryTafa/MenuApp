@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="grey">#c5c5c5</color>
+    <color name="grey_price">#7F7F7F</color>
+    <color name="grey_name">#8D8D8D</color>
+    <color name="prepartion_color">#AAAAAA</color>
+    <color name="customize_your_meal_color">#AAAAAA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_color">#FDFDFD</color>
+    <color name="food_item_bg_color">#F7FAFE</color>
+    <color name="payment_item_bg_color">#f5f5f5</color>
+    <color name="secondary_background_color">#F9F9F9</color>
+    <color name="primary_colour">#4281E0</color>
+    <color name="back_to_home_color">#FAFAFA</color>
+    <color name="back_to_home_stroke_color">#C4C4C4</color>
+    <!--    <color name="secondary_on_primary_color">#7CE7F1FD</color>-->
+    <color name="secondary_on_primary_color">#EBF6FF</color>
+
+</resources>

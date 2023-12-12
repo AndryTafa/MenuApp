@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:id="@+id/clAll"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_guideline_0.2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_guideline_0.4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/tvMainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:gravity="center"
+        android:text="Thank You!"
+        android:textSize="@dimen/_24ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tvSubText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvSubText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:gravity="center"
+        android:text="Take your reception and show it \n to the serving area"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toTopOf="@id/ivBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMainText" />
+
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_minus20sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/thank_you_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/h_guideline_0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_guideline_0.15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_guideline_0.4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
